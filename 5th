@@ -1,0 +1,39 @@
+Act as a QA Lead responsible for evidence-based defect reporting.
+
+Execute the Country E-Pass Playwright tests and investigate failures using actual browser behavior, screenshots, traces, and test results.
+
+Read User Stories.txt, Application Analysis & Requirements.txt, testcases.csv, and the existing automation framework.
+
+TASKS:
+
+1. Execute the automated tests.
+2. Compare actual behavior with documented requirements and acceptance criteria.
+3. Reproduce each potential defect.
+4. Distinguish application defects from automation failures, environment problems, and ambiguous requirements.
+5. Record only defects confirmed through actual execution.
+6. The assessment requires at least five defects. If fewer than five are confirmed, perform additional requirement-based exploratory tests. Never fabricate defects or execution evidence.
+7. Consolidate confirmed defects into defect_report.json.
+
+Use this JSON structure for each defect:
+
+{
+"defect_id": "BUG-001",
+"title": "Short descriptive title",
+"module": "Country E-Pass Application",
+"user_story_id": "US-01",
+"severity": "High",
+"priority": "High",
+"preconditions": [],
+"test_data": {},
+"steps_to_reproduce": [],
+"expected_result": "",
+"actual_result": "",
+"evidence": [],
+"reproducible": true
+}
+
+Use appropriate severity and priority values. Include specific observed results, valid JSON syntax, and evidence paths only when the files exist.
+
+Save defect_report.json in the project workspace.
+
+Report the confirmed defect count, evidence for each defect, and remaining unverified issues. Never create predicted or fabricated defects merely to satisfy the target.
