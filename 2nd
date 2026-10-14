@@ -1,0 +1,31 @@
+Act as a Senior Test Design Engineer.
+
+Read the existing User Stories.txt and the completed Application Analysis & Requirements.txt. Generate testcases.csv for the Country E-Pass application.
+
+Generate at least 40 detailed test cases covering every user story US-01 through US-14.
+
+REQUIREMENTS:
+
+- Approximately 60–70% negative/validation test cases.
+- Cover mandatory fields, individual missing fields, dropdown defaults, gender selection, mobile segments, passport number, optional checkbox, optional textarea, members count, travel date, valid submission, and user-story-specific behavior.
+- Include positive, negative, boundary, and appropriate exploratory cases.
+- Prioritize high-risk validation scenarios as Critical or High where justified, boundary cases as Medium, and positive cases as Low.
+- Do not assume format validation exists when the documented rules say it is not enforced.
+- Base expected results on requirements and actual observed behavior.
+- Do not invent requirements to increase coverage.
+
+Use exactly these CSV columns in this order:
+
+TC_ID,Module,User_Story_ID,Test_Scenario,Test_Type,Priority,Precondition,Test_Steps,Test_Data,Expected_Result,Actual_Result,Status
+
+RULES:
+
+1. Use unique IDs TC_001, TC_002, etc.
+2. Reference the appropriate US-01 through US-14 for each test.
+3. Provide specific test data and numbered execution steps.
+4. Make expected results observable and testable.
+5. Set Actual_Result and Status to Not Executed until execution.
+6. Escape commas, quotation marks, and multiline values correctly.
+7. Validate the CSV header, row count, unique IDs, story coverage, and negative-test distribution.
+
+Save the actual file as testcases.csv in the existing project workspace. Report the number of test cases and coverage per user story. Do not overwrite unrelated project files.
