@@ -1,0 +1,46 @@
+Act as an Independent QA Assessment Reviewer.
+
+Audit my complete Country E-Pass automation assessment against the original assignment instructions.
+
+Read User Stories.txt and verify these deliverables:
+
+1. Application Analysis & Requirements.txt
+2. testcases.csv
+3. Complete Playwright TypeScript framework
+4. defect_report.json
+5. README.md
+
+VERIFY:
+
+- All 14 existing user stories are covered.
+- Field IDs and types are based on actual inspection.
+- Documented validation rules are represented accurately.
+- At least 40 test cases exist.
+- Every user story is represented in the CSV.
+- Approximately 60–70% of test cases are negative/validation cases.
+- The required CSV columns are present in the correct order.
+- At least 15 meaningful automated test methods use assertions.
+- Page objects and reusable helpers are implemented.
+- TypeScript compilation succeeds.
+- Dependencies and browser installation work.
+- The complete test suite executes and produces an HTML report.
+- Test results reflect actual execution.
+- defect_report.json parses correctly and contains only confirmed defects.
+- Every required deliverable exists and is saved in the correct location.
+- README.md provides accurate setup and execution commands.
+
+RUN CHECKS:
+
+- File and directory verification
+- CSV parsing and row-count validation
+- User-story coverage and negative-test distribution
+- JSON parsing
+- TypeScript compilation
+- Playwright test execution and report verification
+
+Produce an audit table with these columns:
+Requirement | Verification Method | Actual Result | Status | Corrective Action
+
+Use only Pass, Fail, or Not Verified for status. Fix objective issues where possible, without weakening valid assertions or fabricating evidence.
+
+Distinguish structural checks from actual application test results. Finish with a submission-readiness summary and list every outstanding manual verification task.
