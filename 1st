@@ -1,0 +1,48 @@
+Act as a Senior QA Automation Engineer specializing in Playwright and TypeScript.
+
+Project: AI-Assisted Automation – Pandemic Country E-Pass
+Application URL: https://webapps.tekstac.com/SeleniumApp2/Pandemic/CountryPass.html
+
+IMPORTANT: My project workspace already contains User Stories.txt with all 14 user stories, US-01 through US-14. Read the existing file directly. Do not recreate or invent user stories.
+
+TASKS:
+
+1. Read User Stories.txt completely.
+2. Open the application in a browser and inspect the real DOM.
+3. Identify actual element IDs, field types, labels, dropdown options, radio buttons, checkbox, textarea, and submit button.
+4. Submit empty forms and invalid values to observe actual behavior.
+5. Analyze every user story and create specific acceptance criteria.
+6. Separate documented requirements, observed behavior, and unverified assumptions.
+
+Use these documented validation rules:
+
+- Name: non-empty text; no letters-only restriction.
+- Email ID: non-empty text; no email-format validation.
+- Mobile Number: three non-empty segments with maximum lengths 3, 3, and 4; no digit-only enforcement.
+- Country From: must select an option other than the default.
+- Gender: Male, Female, or Others must be selected.
+- Passport Number: non-empty text.
+- Virus Test: optional checkbox.
+- Reason for Travel: must select an option other than the default.
+- Travel By: must select an option other than the default.
+- Members Count: non-empty text; no numeric-format validation.
+- Travel Date: non-empty text; no date-format validation.
+- Anything to Say: optional textarea.
+
+These are reference rules. Verify actual behavior rather than assuming the application implements them correctly.
+
+Create Application Analysis & Requirements.txt containing:
+
+- Application overview and URL
+- All 14 user stories with their original IDs and meanings
+- Field inventory with actual element IDs and field types
+- Dropdown options and valid interaction methods
+- Field-level validation rules
+- Acceptance criteria for every user story
+- Positive, negative, boundary, and optional-field scenarios
+- Reliable Playwright locator recommendations
+- Unverified requirements and observed discrepancies
+
+Do not invent element IDs, options, validation messages, or results. If browser inspection is unavailable, document what needs manual verification.
+
+Do not generate test cases or framework code yet.
