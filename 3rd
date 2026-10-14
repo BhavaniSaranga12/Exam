@@ -1,0 +1,57 @@
+Act as a Senior Playwright Automation Architect.
+
+Build a complete Playwright Test + TypeScript automation framework for the Country E-Pass application using the existing project requirements.
+
+Application URL:
+https://webapps.tekstac.com/SeleniumApp2/Pandemic/CountryPass.html
+
+FIRST READ:
+
+- User Stories.txt
+- Application Analysis & Requirements.txt
+- testcases.csv
+
+TECHNOLOGY:
+
+- Node.js
+- TypeScript
+- Playwright Test
+- Page Object Model (POM)
+- Reusable helper utilities
+- Playwright expect() assertions
+- HTML reporting
+
+Create this structure, adapting it to the existing workspace when appropriate:
+
+package.json
+playwright.config.ts
+tsconfig.json
+pages/CountryPassPage.ts
+tests/country-pass.spec.ts
+utils/testData.ts
+utils/testHelpers.ts
+README.md
+
+Add supporting files when necessary.
+
+IMPLEMENTATION REQUIREMENTS:
+
+1. Configure the correct base URL and navigate directly to CountryPass.html. There is no login step.
+2. Inspect the actual DOM and use verified element IDs, accessible labels, or reliable locators.
+3. Implement a CountryPassPage class with reusable methods for every form field and submission.
+4. Implement at least 15 meaningful automated test methods. Helper methods do not count as test methods.
+5. Include positive, negative, boundary, required-field, dropdown, radio-button, checkbox, textarea, and complete-submission scenarios.
+6. Map test coverage to all 14 user stories.
+7. Assert observable behavior: field values, selections, validation messages, submission results, or confirmation details.
+8. Respect the documented validation rules. Do not expect email, number, or date-format validation unless supported by the requirements and actual application.
+9. Do not invent element IDs, messages, dropdown values, or successful outcomes.
+10. Keep tests isolated and repeatable. Use suitable waits and avoid arbitrary sleeps, brittle selectors, unnecessary force clicks, and duplicated code.
+11. Do not hard-code a validation message without confirming it.
+12. Configure useful HTML reporting and include commands for installing dependencies, installing Playwright browsers, running tests, running headed tests, and generating reports.
+13. Use the Playwright version compatible with the installed environment.
+14. Generate complete source files, not partial snippets.
+15. If browser execution is available, install dependencies, compile TypeScript, run the tests, and fix genuine errors.
+16. Never remove valid tests or weaken assertions simply to make the report green.
+17. Do not claim tests passed unless they actually ran and passed.
+
+Before finishing, verify that the project structure, imports, selectors, configuration, and execution instructions are consistent. Explain which commands I need to run.
