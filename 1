@@ -1,0 +1,258 @@
+Act as a senior QA Automation Engineer specializing in Selenium with JavaScript/TypeScript or the automation technology already configured in this workspace.
+
+I am completing an AI-Assisted Automation assessment. Follow the existing workspace and its instructions carefully.
+
+**APPLICATION UNDER TEST**
+
+URL: http://webapps.tekstac.com/SeleniumApp1/SmartUniversity/
+
+Login username: admin
+Login password: admin#123
+
+**OBJECTIVE**
+
+Build a complete, maintainable automation framework covering these three modules:
+
+1. Login page, including CAPTCHA handling.
+2. Students menu → Add Students.
+3. Professor menu → Add Professor.
+
+**MANDATORY FIRST ACTIONS**
+
+1. Inspect the entire existing workspace, package.json, configuration files, installed dependencies, existing source code, and test files.
+2. Identify the automation framework, language, folder structure, test runner, and existing conventions.
+3. Open and inspect the application in a browser if browser access is available.
+4. Inspect all three modules, all form fields, labels, buttons, element IDs, navigation, error messages, success alerts, and actual validation behavior.
+5. Never invent element IDs, selectors, field names, validation rules, or application behavior. Record only verified findings.
+6. Preserve the provided workspace structure. Do not replace the project or create redundant files.
+
+**FRAMEWORK REQUIREMENTS**
+
+Build or extend the framework using the technology already configured in the workspace.
+
+Implement:
+
+* LoginPage page object.
+* AddStudentPage page object.
+* AddProfessorPage page object.
+* A shared login helper that every test uses.
+* Reusable navigation and form interaction methods.
+* Explicit, meaningful assertions.
+* Reliable waits instead of arbitrary sleep statements.
+* Clear error handling, readable test names, and maintainable selectors.
+
+**LOGIN REQUIREMENTS**
+
+Every automated test must:
+
+1. Open the application.
+2. Enter admin / admin#123.
+3. Read the CAPTCHA answer displayed by the application and enter the correct answer using a legitimate, application-supported method.
+4. Submit the login form.
+5. Handle and verify the actual success alert.
+6. Verify successful navigation or authenticated state before accessing another module.
+
+Do not hardcode a changing CAPTCHA answer. Do not bypass authentication. Determine how the CAPTCHA is generated and displayed by inspecting the application.
+
+**VALIDATION REQUIREMENTS**
+
+Inspect empty submissions and invalid inputs in all three modules. Identify required fields, accepted formats, boundary conditions, invalid values, duplicate handling, and actual error messages. Test only rules supported by the application.
+
+**OUTPUT**
+
+First report:
+
+* Workspace structure and technology.
+* Existing test runner and dependencies.
+* Verified page elements and IDs.
+* Observed validation rules.
+* Implementation plan and any blockers.
+
+Then implement the framework in the existing workspace. Do not claim completion until the implementation is actually checked and executed.
+Continue using the existing workspace and your verified findings from the application.
+
+Prepare the complete analysis for the Login, Add Student, and Add Professor modules.
+
+**Acceptance criteria**
+
+* Document acceptance criteria for every user story from US-01 through US-21.
+* Use the assessment requirements and actual application behavior.
+* Make each criterion clear, observable, and testable.
+* Include positive behavior, negative behavior, validation, boundary conditions, navigation, and alerts where applicable.
+* Do not invent missing user stories. If their exact descriptions are unavailable, identify the gap and inspect available assessment files.
+
+**Validation rules**
+
+* Identify every field-level validation rule for all three modules.
+* Record field name, verified element ID, required/optional status, valid format, invalid examples, boundary conditions, observed validation message, and observed behavior.
+* Distinguish verified behavior from unverified assumptions.
+* Submit empty forms and invalid values where safe and appropriate to observe actual behavior.
+
+Save all findings in the exact required file:
+Application Analysis & Requirements.txt
+
+Include the application analysis, login/CAPTCHA flow, element IDs, acceptance criteria for US-01 through US-21, and validation rules.
+
+Verify that the file exists and that it is readable. Do not mark an unverified rule as confirmed.
+
+Generate at least 60 detailed manual test cases covering all 21 user stories across Login, Add Student, and Add Professor.
+
+Before generating cases, read Application Analysis & Requirements.txt and use only verified application behavior and the available user-story requirements.
+
+Save the file as:
+testcases.csv
+
+Use exactly these columns in this order:
+TC_ID,Module,User_Story_ID,Test_Scenario,Test_Type,Priority,Precondition,Test_Steps,Test_Data,Expected_Result,Actual_Result,Status
+
+**Coverage requirements**
+
+* Include positive, negative, validation, boundary, navigation, and alert-handling scenarios.
+* Approximately 60–70% of test cases must be negative/validation scenarios.
+* Negative/validation cases should have Critical or High priority where justified.
+* Boundary cases should have Medium priority.
+* Positive/success cases should have Low priority.
+* Cover all 21 user stories. Distribute cases according to actual functionality and risk.
+* Use unique test case IDs.
+* Include specific test data, numbered actionable steps, and measurable expected results.
+* Keep CSV fields valid when they contain commas, quotes, or line breaks.
+* Use only verified field names and validation rules.
+* Do not invent user-story IDs or claim unverified behavior.
+
+For Actual_Result and Status, use a clearly identified not-executed value until the case has actually been executed. Never fabricate pass/fail results.
+
+After creating the file, validate the CSV syntax, headers, number of rows, unique IDs, module coverage, story coverage, and negative/validation percentage. Fix any issues and report the actual counts.
+
+Implement a complete automation suite in the existing workspace using the already configured language, browser automation library, and test runner.
+
+Read Application Analysis & Requirements.txt and testcases.csv before writing the tests.
+
+**MANDATORY REQUIREMENTS**
+
+1. Implement at least 20 distinct automated test methods with meaningful assertions.
+2. Cover all three modules: Login, Add Student, and Add Professor.
+3. Prioritize critical and high-risk validation scenarios over happy paths.
+4. Every test must begin with the shared login helper, which logs in using admin / admin#123, reads the displayed CAPTCHA answer, enters it, submits the form, and handles the actual success alert.
+5. Verify authentication before navigating to the relevant form.
+6. Use the verified element IDs and observed validation rules in selectors, test descriptions, and assertions.
+7. Reuse page objects and helper methods instead of duplicating login and navigation code.
+8. Assert actual outcomes, including field validation messages, success/error alerts, navigation, and form submission results as applicable.
+9. Cover empty required fields, invalid values, valid values, boundary conditions, and other verified high-risk cases.
+10. Keep tests independent and deterministic. Reset or use unique test data where necessary to avoid duplicate-record interference.
+11. Use appropriate waits, robust locators, clear test names, and useful failure messages.
+12. Do not hardcode CAPTCHA answers, suppress failures, use empty assertions, or mark skipped tests as passed.
+13. Do not change the provided workspace structure unnecessarily.
+
+Implement the page objects for Login, Add Student, and Add Professor, plus the shared login helper and any required test configuration.
+
+Run the tests using the integrated terminal and the existing test runner. Report the actual number of automated methods implemented and the actual execution results. Fix implementation errors before reporting completion.
+
+Now perform a complete verification and refinement cycle on the automation framework you implemented.
+
+**EXECUTION**
+
+1. Run the full test suite from the VS Code integrated terminal using the project's configured test command.
+2. Capture actual pass, fail, skip, and error counts.
+3. For each failure, inspect the stack trace, locator, current page state, validation message, alert behavior, test data, and timing.
+4. Reproduce failures where possible and determine whether the cause is the automation code, the test data, the environment, or the application itself.
+
+**CORRECTIONS**
+
+* Fix incorrect selectors using verified element IDs.
+* Fix login helper, CAPTCHA reading, and success-alert handling.
+* Correct waits and navigation.
+* Correct assertions that do not match actual application behavior.
+* Fix test-data collisions and test-order dependencies.
+* Fix incorrect expected results using observed application behavior and documented requirements.
+* Improve negative and boundary validation coverage.
+* Remove duplicate or meaningless tests.
+* Do not weaken assertions merely to make tests pass.
+* Do not suppress exceptions or convert genuine failures into passes.
+
+**FINAL VERIFICATION**
+Run the full suite again after changes. Check that at least 20 automated test methods exist and that all three modules are covered.
+
+Save or update the final code in the existing workspace. Provide a concise summary of:
+
+* Files created or modified.
+* Number of automated test methods.
+* Final actual pass/fail/skip/error counts.
+* Remaining failures and their verified causes.
+* Any blockers preventing complete execution.
+
+Never report a test as passed unless it actually passed during execution.
+
+Execute the completed automation suite and document defects discovered during actual test runs.
+
+Save one consolidated JSON file at:
+defects/defect_report.json
+
+Document at least 8 genuine defects across the Login, Add Student, and Add Professor modules if at least 8 defects are actually observed.
+
+Each defect record should contain, where supported by the assessment format:
+
+* Defect_ID
+* Module
+* Related_Test_Case_ID
+* Summary
+* Preconditions
+* Steps_To_Reproduce
+* Test_Data
+* Actual_Result
+* Expected_Result
+* Severity
+* Priority
+* Evidence or error details
+
+Use actual test execution results and observed application behavior. Separate confirmed defects from environment issues and automation-script failures.
+
+Do not invent defects, fabricate screenshots, or classify an expected validation response as a defect. If fewer than eight genuine defects are found, report the verified count and continue investigating additional relevant scenarios.
+
+Validate the JSON syntax and ensure the file contains a single consolidated report. Confirm the output path and summarize the defects actually discovered.
+
+Perform a final audit of the complete AI-Assisted Automation assessment against the original assessment instructions.
+
+Verify these deliverables:
+
+1. Application Analysis & Requirements.txt
+
+   * Analysis of all three modules.
+   * Login/CAPTCHA flow and verified element IDs.
+   * Acceptance criteria for US-01 through US-21.
+   * Field-level validation rules.
+
+2. testcases.csv
+
+   * At least 60 detailed test cases.
+   * Exact required column names and order.
+   * Coverage across all three modules and all available 21 user stories.
+   * Approximately 60–70% negative/validation cases.
+   * Correct priority distribution.
+   * Valid CSV syntax.
+
+3. Automation codebase
+
+   * Login, Add Student, and Add Professor page objects.
+   * Shared login helper.
+   * At least 20 automated test methods with assertions.
+   * Every test uses the required login helper.
+   * Critical and high-risk validations are prioritized.
+   * Existing workspace structure is preserved.
+
+4. defects/defect_report.json
+
+   * One consolidated valid JSON report.
+   * At least eight defects only if eight genuine defects were observed during execution.
+   * Actual and expected results, severity, and priority.
+
+5. Execution evidence
+
+   * Run the full test suite from the integrated terminal.
+   * Report real pass/fail/skip/error counts.
+   * Confirm all fixes were followed by another execution.
+   * Identify unresolved failures and missing evidence.
+
+Check every required file exists at the correct path. Fix missing files, invalid formats, missing coverage, and implementation issues where possible.
+
+Do not claim 100% completion or passing results without evidence. Finish with a checklist of requirements marked VERIFIED, FAILED, or BLOCKED, supported by actual inspection and execution.
+
