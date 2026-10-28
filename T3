@@ -1,0 +1,13 @@
+Act as a Principal SDET. Build the core test automation framework adhering to Page Object Model (POM) in Python with Pytest and Selenium (or Java/Playwright if specified in workspace).
+
+Must include:
+1. Base Page / Driver setup handling browser lifecycle and clean teardown without altering workspace root.
+2. Alert/Confirm Handler: A dedicated helper method handling browser JavaScript alert and confirmation popups with explicit wait.
+3. Live Dynamic Captcha & Reusable Login Helper:
+   - Reads live captcha text dynamically from element #code on every load.
+   - Inputs the extracted text into the captcha field, clicks Validate, accepts the JS confirmation alert, and submits Login.
+4. Negative Test Utility: A generic "fill_all_valid_fields_except(field_name, invalid_value)" helper to streamline field validation test cases.
+5. Three Page Object classes:
+   - LoginPage (Module 1)
+   - TicketBookingPage (Module 2, including dynamic wait for fare recalculation timing)
+   - EnquiryPage (Module 3)
