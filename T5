@@ -1,0 +1,13 @@
+Generate the file "defects/defect_report.json" capturing exactly 8 validation defects discovered during test execution, ensuring at least 2 defects per module.
+
+Structure each defect with these exact fields:
+- defect_id
+- module (Login, Ticket Booking, Enquiry)
+- user_story_id
+- entered_data (what was entered)
+- actual_behavior (what happened)
+- expected_result (what should have happened)
+- severity (Critical, Major, Minor)
+- priority (High, Medium, Low)
+
+Ensure defects reflect genuine missing client-side validation rules (e.g., booking accepting invalid email formats, non-numeric phone numbers, negative passenger count decrement, message submitted with under 15 characters, case sensitivity bypass in captcha). Output pure JSON.
