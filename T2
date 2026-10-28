@@ -1,0 +1,14 @@
+Act as a Senior QA Test Engineer. Generate a comprehensive "testcases.csv" file containing exactly 42 test cases across 3 modules.
+
+Strict constraints:
+1. Header columns must be exactly:
+   TC_ID,Module,User_Story_ID,Test_Scenario,Test_Type,Priority,Precondition,Test_Steps,Test_Data,Expected_Result,Actual_Result,Status
+2. Module distribution:
+   - Module 1 (Login): Exactly 13 test cases covering US-01 to US-09.
+   - Module 2 (Ticket Booking): Exactly 19 test cases covering US-10 to US-21.
+   - Module 3 (Enquiry): Exactly 10 test cases covering US-22 to US-26.
+3. Priority and Type rules:
+   - 60% to 70% must be Negative/Validation scenarios marked as Critical or High priority.
+   - Boundary test cases (e.g., name lengths 2/3 chars, message 14/15 chars, passenger count <= 0, class change after count set, case-altered captcha) marked as Medium priority.
+   - Positive/Happy-path cases marked as Low priority.
+4. Output must be raw, valid CSV format (properly quoted fields where commas exist).
