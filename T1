@@ -1,0 +1,9 @@
+Act as a Lead QA Automation Architect. Generate the complete "Application Analysis & Requirements.txt" file based on the application under test (encompassing Login, Ticket Booking, and Enquiry modules).
+
+Requirements to cover:
+1. Module Breakdown: Analyze Module 1 (Login - US-01 to US-09), Module 2 (Ticket Booking - US-10 to US-21), and Module 3 (Enquiry - US-22 to US-26).
+2. For each module, document:
+   - Field names, Element IDs, and Input/Field Types.
+   - Acceptance criteria and intended business rules.
+   - Client-side validation rules enforced vs NOT enforced (explicitly identify missed validations: unvalidated email format on booking, non-numeric phone values accepted, invalid date format handling, passenger count decrementing below zero/bounds, message length under 15 characters accepted).
+Format as clean, structured plain text ready to save directly as Application Analysis & Requirements.txt.
