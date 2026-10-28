@@ -1,0 +1,9 @@
+Using the Page Objects and reusable helpers created, implement a minimum of 27 automated test methods with explicit assertions across the 3 modules:
+- At least 8 tests for Module 1 (Login).
+- At least 11 tests for Module 2 (Ticket Booking).
+- At least 8 tests for Module 3 (Enquiry).
+
+Criteria:
+- Heavily prioritize critical and high-risk negative validations over happy paths.
+- Incorporate explicit synchronization for dynamic UI changes (specifically alert handling and fare recalculation latency).
+- Structure tests using pytest fixtures (or TestNG if Java) with clear assertions verifying defect behaviors and alert messages.
