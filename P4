@@ -1,0 +1,6 @@
+Using the Page Objects and reusable helpers created, implement at least 30 automated test methods with explicit assertions across the 2 modules:
+Cover US-01 through US-23.
+Criteria:
+Heavily prioritize critical and high-risk validations over happy paths.
+Incorporate explicit synchronization for native JavaScript alert handling.
+Structure tests using pytest fixtures with clear assertions verifying alert messages, native browser popup text, and form submission behaviors (noting that Contact Us has no validation and navigates to index.html).
