@@ -1,0 +1,8 @@
+Act as a Lead QA Automation Architect. Generate the complete "Application Analysis & Requirements.txt" file based on the Hotel SkyWoodLake application under test (encompassing Booking and Contact Us modules).
+Requirements to cover:
+1. Module Breakdown: Analyze Module 1 (Booking - US-01 to US-15) and Module 2 (Contact Us - US-16 to US-23).
+2. For each module, document:
+Field names, Element IDs/locators, and Input/Field Types.
+Acceptance criteria and intended business rules.
+Client-side validation rules enforced vs NOT enforced (explicitly identify missed validations: unvalidated email/phone formats, check-in vs check-out date edge cases, room/person/child/restaurant count zero bounds, Contact Us having zero validation and navigating to index.html via GET without a name attribute).
+Format as clean, structured plain text ready to save directly as Application Analysis & Requirements.txt.
