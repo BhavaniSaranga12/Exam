@@ -1,0 +1,8 @@
+Act as a Principal SDET. Build the core test automation framework adhering to Page Object Model (POM) in Python with Pytest and Selenium.
+Must include:
+1. Base Page / Driver setup handling browser lifecycle and clean teardown without altering workspace root.
+2. Alert Handler: A dedicated helper method handling browser JavaScript alert popups with explicit wait, ensuring alert text is read before dismissing.
+3. Two Page Object classes (no login helper required, navigate directly to each module before interacting):
+BookingPage (Module 1, handling hotel reservation form, dropdowns, count spinners, and dynamic total cost derivation).
+ContactUsPage (Module 2, handling contact form inputs and submission).
+4. Negative Test Utility: A generic helper to streamline field validation test cases.
